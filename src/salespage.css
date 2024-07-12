@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100vh;
+}
+
+.bcground {
+    background-color: #F7F0E9;
+    padding-bottom: 60px;
+}
+
+
+.mainsale {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding: 1%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.theTime {
+    font-size: 30px;
+    text-align: center;
+    color: red;
+}
+
+
+.mainsale a {
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+}
+
+.mainsale h1 {
+    -webkit-text-stroke: 1px black;
+    font-family: serif, Arial, Helvetica, sans-serif;
+    font-size: 3em;
+}
+
+#productmain {
+    font-weight: bold;
+    color: #DF5333;
+    margin-top: 13px;
+}
+
+
+
+#timer {
+    font-size: 20px;
+    color: #DF5333;
+    text-decoration: none;
+    margin-left: 7em;
+}
+
+#slider-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #ec5858;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    max-width: 95%;
+    margin-left: 41px;
+}
+
+#slider-text .col-md-3 {
+    display: flex;
+    justify-content: center;
+}
+
+#slider-text h2 {
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#slider-text h2:hover {
+    background-color: rgb(217, 217, 217);
+    color: #000000;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+#slider-text h2.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-item {
+    width: calc(100% / 5 - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+
+}
+
+.product-item:hover {
+    width: calc(100% / 5 - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scale(1.05);
+    box-shadow: rgb(0, 0, 0) 5px 10px 20px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.product-item h4 {
+    text-align: center;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+.product-item h5 {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.product-item h6 {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #777;
+}
+
+.product-item .badge {
+    background: #f8d7da;
+    color: #fff;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 2px solid #f5c6cb;
+    top: 20px;
+    left: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 50px;
+    height: 30px;
+}
+
+.product-item .btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.product-item .btn-container button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-item .btn-container button.add-to-cart {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.product-item .btn-container button.more-details {
+    background-color: #424242;
+    color: #fff;
+}
+
+.btn {
+    color: white;
+}
+
+.category-header {
+    color: rgb(255, 89, 0);
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline rgba(241, 11, 11, 0.258);
+    text-underline-offset: 10px;
+    width: 100%;
+    display: block;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    margin-bottom: 20px;
+}
+
+
+
+#sort-options {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.sort-container {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.product-item p {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 12px;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+:root {
+
+    --Grayish_blue: hsl(237, 18%, 59%);
+    --Soft_red: hsl(345, 100%, 50%);
+    --White: hsl(0, 0%, 100%);
+    --Dark_desaturated_blue: hsl(236, 21%, 26%);
+    --Very_dark_blue: hsl(235, 16%, 14%);
+    --Very_dark_blac_blue: hsl(234, 17%, 12%);
+
+    --h-text: 1.1rem;
+    --p-text: 1.8rem;
+    --s-text: 0.5rem;
+
+    --circle-width: 0.25em;
+    --circle-height: 0.45em;
+}
+
+.heading {
+    font-size: var(--h-text);
+    color: var(--White);
+    letter-spacing: 0.5ch;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.primary {
+    font-size: var(--p-text);
+    color: var(--Soft_red);
+    text-align: center;
+}
+
+.sub-heading {
+    font-size: var(--s-text);
+    color: var(--Grayish_blue);
+    text-align: center;
+    letter-spacing: 0.5ch;
+    margin-top: 1em;
+}
+
+
+main {
+    min-height: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.background {
+    background-color: var(--Very_dark_blue);
+    background-image: url(https://i.postimg.cc/rmwYwjnp/bg-stars.png),
+        url(https://i.postimg.cc/hGg5HcVT/pattern-hills.png);
+    background-position: top, bottom;
+    background-repeat: repeat-x;
+    background-size: 100% 75%, 100% 25%;
+    position: relative;
+    z-index: 2;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    background-color: #322338;
+    filter: blur(100px);
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.timer-container {
+    margin: 1em;
+}
+
+.center {
+    align-self: flex-end;
+}
+
+.countdown-timer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.timer-box {
+    width: 4rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--Dark_desaturated_blue);
+    position: relative;
+    border-radius: 0.25em;
+}
+
+.sheet {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: var(--Very_dark_blue);
+    opacity: 0.35;
+}
+
+.flip {
+    transition: transform 1s;
+    transform: translate(0%, 100%) scaleY(-1);
+}
+
+.circle-left {
+    width: var(--circle-width);
+    height: var(--circle-height);
+    position: absolute;
+    background-color: var(--Very_dark_blac_blue);
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    top: 45%;
+    left: 0;
+}
+
+.circle-right {
+    width: var(--circle-width);
+    height: var(--circle-height);
+    position: absolute;
+    background-color: var(--Very_dark_blac_blue);
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    top: 45%;
+    right: 0;
+}
+
+.bottom {
+    align-self: end;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.timerFont {
+    font-size: 12px;
+}
+
+.social-icon {
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    filter: brightness(0) saturate(100%) invert(54%) sepia(7%) saturate(5054%) hue-rotate(297deg) brightness(99%) contrast(99%);
+}
+
+@media (min-width: 430px) {
+    :root {
+        --h-text: 1.25rem;
+        --p-text: 2rem;
+        --s-text: 0.5rem;
+
+        --circle-width: 0.35em;
+        --circle-height: 0.65em;
+    }
+
+    .timer-box {
+        width: 5rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (min-width: 550px) {
+    :root {
+        --p-text: 3rem;
+        --s-text: 0.75rem;
+
+        --circle-width: 0.4em;
+        --circle-height: 0.7em;
+    }
+
+    .timer-box {
+        width: 6rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (min-width: 800px) {
+    :root {
+        --p-text: 4rem;
+    }
+
+    .timer-box {
+        width: 8rem;
+        padding: 1rem;
+    }
+}
